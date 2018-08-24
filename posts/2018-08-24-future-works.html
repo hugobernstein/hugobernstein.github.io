@@ -18,17 +18,11 @@
   </div>
 
 
-  ◊(->html doc #:splice? #t)
+  <section><h1>future work</h1><article><h2>om front-end</h2><p>From now on(2018-08-24), the template of my blog is available. Next, I should begin writing my content.</p><ul><li>mobile device friendly: modifying jeet(scss)</li><li>innehåll: enzyme engineering, clinical laboratory medicine and machine learning</li><li>parallax is a problem</li></ul></article><aside></aside></section>
 
   <section>
-    ◊(define prev-page (previous here))
-    ◊when/splice[prev-page]{
-    <div id="prev">← <a href="◊|prev-page|">◊(select 'h1 prev-page)</a></div>
-    }
-    ◊(define next-page (next here))
-    ◊when/splice[next-page]{
-    <div id="next"><a href="◊|next-page|">◊(select 'h1 next-page)</a> →</div>
-    }
+
+
   </section>
 
   <div class="footer">

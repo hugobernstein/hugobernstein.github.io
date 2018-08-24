@@ -9,11 +9,27 @@
 </head>
 
 <body>
-  <div class="topnav"><a class="active" href="index.html">Hem</a><a href="urd.html">Urd</a><a href="verdandi.html">Verdandi</a><a href="skuld.html">Skuld</a><a href="image-w3s.html">Modal Image</a><a href="slideshow.w3s.html">Slideshow</a><a href="index.ptree">Yggdrasil</a></div>
-
-  <div class="content">
-    ◊->html[doc]
+  <div class="topnav">
+    <a class="active" href="../index.html">Hem</a>
+    <a href="../urd.html">Urd</a>
+    <a href="../verdandi.html">Verdandi</a>
+    <a href="../skuld.html">Skuld</a>
+    <a class="right" href="../index.ptree">Yggdrasil</a>
   </div>
+
+
+  ◊(->html doc #:splice? #t)
+
+  <section>
+    ◊(define prev-page (previous here))
+    ◊when/splice[prev-page]{
+    <div id="prev">← <a href="◊|prev-page|">◊(select 'h1 prev-page)</a></div>
+    }
+    ◊(define next-page (next here))
+    ◊when/splice[next-page]{
+    <div id="next"><a href="◊|next-page|">◊(select 'h1 next-page)</a> →</div>
+    }
+  </section>
 
   <div class="footer">
     <p>Hugos Tekniska Anteckningar, 2k18</p>

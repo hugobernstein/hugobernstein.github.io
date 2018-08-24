@@ -13,7 +13,7 @@
 (define (link href . elements)
   `(a ((href ,href)) ,@elements))
 (define line (default-tag-function 'hr))
-(define br (default-tag-function 'br))
+
 
 (provide author)
 (define author "Hugo Bernstein")

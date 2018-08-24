@@ -57,12 +57,12 @@
 
 header, footer {
   display: block;
-  margin: 4px;
-  padding: 5px;
-  min-height: 100px;
-  border: 1px solid #eebb55;
-  border-radius: 7pt;
-  background: #ffeebb;
+  padding: 1em;
+  // border: 17px dashed rgba(2,2,5,0.5);
+  border-radius: 2em 1em 4em / 0.5em 3em;
+  background: $blue;
+  color: $base3;
+  text-align: center;
 }
 
 @media all and (max-width: 640px) {
