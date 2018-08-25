@@ -36,7 +36,13 @@ figure {
   }
 }
 
+.subtitle {
+  font-weight: lighter;
+  color: $base0;
+  font-style: italic;
+  margin-bottom: .618em;
 
+}
 
 .strong {
   color: $blue;
@@ -116,12 +122,18 @@ section {
       text-transform: capitalize;
     }
 
-
+    a {
+      color: $blue;
+    }
   }
 
   aside {
     @include column(1/3);
     color: $base1;
+
+    a {
+      color: $blue;
+    }
   }
 }
 

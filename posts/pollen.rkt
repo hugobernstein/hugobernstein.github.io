@@ -41,3 +41,6 @@
    (txexpr 'main empty (decode-elements elements
     	#:txexpr-elements-proc decode-paragraphs
       #:string-proc (compose1 smart-quotes smart-dashes))))
+
+(define-tag-function (subtitle attrs elems)
+    `(div ,(cons '(class "subtitle") attrs) ,@elems))

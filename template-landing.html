@@ -14,7 +14,7 @@
     <a href="urd.html">Urd</a>
     <a href="verdandi.html">Verdandi</a>
     <a href="skuld.html">Skuld</a>
-    <a class="right" href="index.ptree">Yggdrasil</a>
+    <a class="right" href="index.ptree">υ</a>
   </div>
 
   ◊->html[doc]

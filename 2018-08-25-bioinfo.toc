@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}intro}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}classes}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}algorithms}{2}{subsection.1.2}
+\contentsline {section}{\numberline {2}Smith-Waterman}{2}{section.2}
+\contentsline {section}{\numberline {3}Needleman–Wunsch algorithm}{2}{section.3}
+\contentsline {section}{\numberline {4}Dynamic programming}{3}{section.4}

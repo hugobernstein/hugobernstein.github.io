@@ -1,0 +1,103 @@
+% Created 2018-08-25 Sat 16:44
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage{xeCJK,fontenc,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setCJKmainfont{Hiragino Sans GB}
+\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+\newfontfamily\bodyfont[]{Helvetica Neue}
+\newfontfamily\thinfont[]{Helvetica Neue UltraLight}
+\newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
+\renewcommand\abstractname{\textit{Exekutiv Sammanfattning}}
+\renewcommand\contentsname{\textit{Inneh\r{a}ll}}
+\author{aphrodite}
+\date{\today}
+\title{2018-08-25-bioinfo}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.3.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\hrule
+\begin{abstract}
+\noindent
+\vspace{3ex}
+\end{abstract}
+\tableofcontents
+\vspace{3ex}
+\hrule
+\vspace{3ex}
+\begin{center}
+  \noindent Powered by OrgMode and LaTeX{}
+\end{center}
+\newpage
+
+\section{intro}
+\label{sec-1}
+\subsection{classes}
+\label{sec-1-1}
+\begin{itemize}
+\item bioinfomatics
+\item computational biology
+\end{itemize}
+
+\subsection{algorithms}
+\label{sec-1-2}
+\begin{itemize}
+\item smith-waterman
+\item needleman-wunsch
+\item dynamic programming
+\end{itemize}
+
+\section{Smith-Waterman}
+\label{sec-2}
+The Smith–Waterman algorithm performs local sequence alignment; that is, for determining similar regions between two strings of nucleic acid sequences or protein sequences.
+Instead of looking at the entire sequence, the Smith–Waterman algorithm compares segments of all possible lengths and optimizes the similarity measure.
+
+The algorithm was first proposed by Temple F. Smith and Michael S. Waterman in 1981.
+Like the Needleman–Wunsch algorithm, of which it is a variation, Smith–Waterman is a dynamic programming algorithm.
+As such, it has the desirable property that it is guaranteed to find the optimal local alignment with respect to the scoring system being used (which includes the substitution matrix and the gap-scoring scheme).
+The main difference to the Needleman–Wunsch algorithm is that negative scoring matrix cells are set to zero, which renders the (thus positively scoring) local alignments visible.
+Traceback procedure starts at the highest scoring matrix cell and proceeds until a cell with score zero is encountered, yielding the highest scoring local alignment.
+Because of its cubic computational complexity in time and quadratic complexity in space, it often cannot be practically applied to large-scale problems and is replaced in favor of less general but computationally more efficient alternatives such as (Gotoh, 1982), (Altschul and Erickson, 1986), and (Myers and Miller, 1988).
+
+\section{Needleman–Wunsch algorithm}
+\label{sec-3}
+The Needleman–Wunsch algorithm is an algorithm used in bioinformatics to align protein or nucleotide sequences.
+It was one of the first applications of dynamic programming to compare biological sequences.
+The algorithm was developed by Saul B. Needleman and Christian D. Wunsch and published in 1970.
+The algorithm essentially divides a large problem (e.g. the full sequence) into a series of smaller problems and uses the solutions to the smaller problems to reconstruct a solution to the larger problem.
+It is also sometimes referred to as the optimal matching algorithm and the global alignment technique.
+The Needleman–Wunsch algorithm is still widely used for optimal global alignment, particularly when the quality of the global alignment is of the utmost importance.
+
+\section{Dynamic programming}
+\label{sec-4}
+Dynamic programming is both a mathematical optimization method and a computer programming method.
+The method was developed by Richard Bellman in the 1950s and has found applications in numerous fields, from aerospace engineering to economics.
+In both contexts it refers to simplifying a complicated problem by breaking it down into simpler sub-problems in a recursive manner.
+While some decision problems cannot be taken apart this way, decisions that span several points in time do often break apart recursively.
+Likewise, in computer science, if a problem can be solved optimally by breaking it into sub-problems and then recursively finding the optimal solutions to the sub-problems, then it is said to have optimal substructure.
+
+If sub-problems can be nested recursively inside larger problems, so that dynamic programming methods are applicable, then there is a relation between the value of the larger problem and the values of the sub-problems.
+In the optimization literature this relationship is called the Bellman equation.
+% Emacs 25.3.1 (Org mode 8.2.10)
+\end{document}

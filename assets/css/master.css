@@ -277,6 +277,12 @@ figure {
     font-style: italic;
     font-size: smaller; }
 
+.subtitle {
+  font-weight: lighter;
+  color: #839496;
+  font-style: italic;
+  margin-bottom: .618em; }
+
 .strong {
   color: #268bd2;
   font-weight: bold;
@@ -352,6 +358,8 @@ section {
         color: inherit; }
     section article h3 {
       text-transform: capitalize; }
+    section article a {
+      color: #268bd2; }
   section aside {
     float: left;
     clear: none;
@@ -366,6 +374,8 @@ section {
       clear: both; }
     section aside:last-child {
       margin-right: 0%; }
+    section aside a {
+      color: #268bd2; }
 
 .parallax-top {
   background-image: url("../img/cover-ett.jpg");
