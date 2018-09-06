@@ -1,6 +1,6 @@
 #lang racket/base
 
-(require pollen/tag racket/date txexpr pollen/setup pollen/unstable/pygments pollen/decode pollen/misc/tutorial)
+(require pollen/tag racket/date txexpr pollen/setup pollen/unstable/pygments pollen/decode pollen/misc/tutorial pict images/icons/arrow)
 (provide (all-defined-out))
 
 (define headline (default-tag-function 'h1))
@@ -10,10 +10,13 @@
 (define item (default-tag-function 'li))
 ; (define (link url text) `(a ((href ,url)) ,text))
 (define strong (default-tag-function 'strong))
+(define anchor (default-tag-function 'a))
+
 (define (link href . elements)
   `(a ((href ,href)) ,@elements))
 (define line (default-tag-function 'hr))
 
+(define larrow (left-arrow-icon #:color "lightblue"))
 
 (provide author)
 (define author "Hugo Bernstein")
@@ -39,5 +42,4 @@
 
 (define (root . elements)
    (txexpr 'main empty (decode-elements elements
-    	#:txexpr-elements-proc decode-paragraphs
       #:string-proc (compose1 smart-quotes smart-dashes))))

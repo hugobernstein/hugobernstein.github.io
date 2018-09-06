@@ -12,6 +12,8 @@
     ◊h1{Molecular & computational biology}
     ◊hr[#:class "style-one"]
     ◊h2{Mer intressanta artiklar}
+    ◊h3{◊link["posts/2018-08-24-taguchi-method.html"]{Om  Taguchi Metod}}
+    田口方法是一种低成本、高效益的质量工程方法，它强调产品质量的提高不是通过检验，而是通过设计。我比较感兴趣的是田口方法在分子生物学试验设计方面的应用。
     ◊h3{◊link["posts/2018-08-18-wiki.html"]{Om Yggdrasil}}
     Yggdrasil har tre rötter. Den första går till människornas (Midgård) och gudarnas hemvist (Asgård), den andra till jättarnas hemvist (Jotunheim eller Utgård) och den tredje till underjorden (Nifelheim), på trädets norra sida.
 
@@ -21,6 +23,9 @@
     perhaps it is better to put the headlineL1 in an img;
     css::strong är ett problem;
     article part includes three posts: methods, tools and top level researchs.
+
+    ◊h3{TODO:biomarkers}
+    A biological molecule found in blood, other body fluids, or tissues that is a sign of a normal or abnormal process, or of a condition or disease. A biomarker may be used to see how well the body responds to a treatment for a disease or condition. Also called molecular marker and signature molecule.
   }
 
   ◊article{

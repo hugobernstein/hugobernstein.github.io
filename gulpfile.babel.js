@@ -2,7 +2,8 @@ const gulp = require('gulp'),
       pug = require('gulp-pug'),
       html2pug = require('gulp-html2pug'),
       sass = require('gulp-sass'),
-      sh = require('shelljs');
+      sh = require('shelljs'),
+      del = require('del');
 
 const paths = {
   styles: {
@@ -11,7 +12,7 @@ const paths = {
   },
   pug: {
     src: 'assets/pugs/*.pug',
-    dest: './'
+    dest: 'Valhall'
   },
   tex: {
     src: 'orgutkasten/*.tex',
@@ -22,39 +23,48 @@ const paths = {
     dest: 'Valhall/pdf'
   },
   pollen: {
-    src: 'posts/*.pm',
+    src: 'utkast/*.html.pm',
     dest: 'Valhall/pm'
   },
   tmphtml: {
-    src: 'Valhall/*.html',
+    src: 'Valhall/html/*.html',
     dest: 'Valhall/pugs'
   }
 }
 
-export function deltatex(done) {
-  sh.exec('for f in $(find orgutkasten -iname *.tex); do xelatex $f; done');
-  done();
+export function deltatex(callback) {
+  sh.exec('for f in $(find orgutkasten -iname *.tex); do xelatex $f; done', callback);
 }
 
 export function rensatex(done) {
-  sh.exec('rm *.aux *.log *.bbl *.out *.blg *.toc *.synctex.gz');
+  sh.exec('junk="aux log bbl out blg toc synctex.gz"; for i in ${junk[*]}; do rm *.$i; done;');
   done();
 }
 
-export function pdfsamlare(done){
-  sh.exec('mv ./*.pdf Valhall/pdf/');
+export function clean(done) {
+  del('*.aux');
   done();
 }
 
-export function texsamlare(done) {
-  sh.exec('mv orgutkasten/*.tex Valhall/TeX/');
-  done();
+export function pdfsamlare(callback){
+  sh.exec('mv ./*.pdf Valhall/pdf/', callback);
 }
 
-export function samlare(done) {
-  sh.exec('mv *.pdf Valhall/pdf/');
-  sh.exec('mv orgutkasten/*.tex Valhall/TeX/');
-  sh.exec('mv orgutkasten/*.org Valhall/orgmode/');
+export function texsamlare(callback) {
+  sh.exec('mv orgutkasten/*.tex Valhall/TeX/', callback);
+}
+
+export function samlare(callback) {
+  sh.exec('mv *.pdf Valhall/pdf/; mv orgutkasten/*.tex Valhall/TeX/; mv orgutkasten/*.org Valhall/orgmode/', callback);
+}
+
+export function hamtaorgmodeutkast(callback){
+  sh.exec('mv Valhall/orgmode/*.org orgutkasten/', callback);
+}
+
+export function publicera(done) {
+  sh.exec('raco pollen publish utkast posts');
+  done();
 }
 
 export function styles() {
@@ -80,8 +90,12 @@ function watch() {
   gulp.watch(paths.styles.src, styles, tillhtml);
   gulp.watch(paths.pug.src, tillhtml);
   gulp.watch('Valhall/**/*.md', tillhtml);
+  gulp.watch(paths.pollen.src, publicera);
 }
 
-const build = gulp.series(styles, tillhtml, deltatex, rensatex, watch);
+gulp.task('rensa', gulp.series(texsamlare, pdfsamlare));
 
+const build = gulp.series(styles, tillhtml, publicera, deltatex, watch);
 gulp.task('default', build);
+
+// min kod blir bättre och bättre

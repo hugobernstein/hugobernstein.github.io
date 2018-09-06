@@ -22,8 +22,6 @@
   <div class="footer">
     <p>Hugos Tekniska Anteckningar, 2k18</p>
   </div>
-  <script type="text/javascript" src="assets/js/master.js"></script>
-  <script type="text/javascript" src="assets/js/slideshow.js"></script>
 </body>
 
 </html>

@@ -28,6 +28,7 @@
 
     ◊hr[#:class "style-one"]
     ◊div[#:class "subtitle"]{Sökord: verktyg}
+    ◊h2{◊link["posts/2018-08-27-data-visualization.html"]{数据可视化}}
 
     ◊hr[#:class "style-one"]
     ◊div[#:class "subtitle"]{Sökord: mini-genomgång; ansökan}
