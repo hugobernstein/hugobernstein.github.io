@@ -12,12 +12,16 @@
     ◊h2{Mer intressanta artiklar}
     ◊h3{◊link["posts/2018-08-21-python.html"]{用Python进行特征选择}}
     特征选择，也就是从数据集中找出并选择最有用特征的过程，是机器学习工作流中一个非常重要的步骤。不必要的特征降低了训练速度，降低了模型的可解释性，最重要的是降低了测试数据集的泛化能力。
+    ◊h3{◊link["posts/2018-09-05-svg.html"]{om svg}}
+    ◊h3{◊link["posts/2018-08-27-data-visualization.html"]{om dataviz}}
   }
 
   ◊article{
     ◊hr[#:class "style-one"]
     ◊div[#:class "subtitle"]{Sökord: metod}
-
+    ◊h2{◊link["posts/2018-09-05-svg.html"]{om svg}}
+    Resizing svg when window is resized is a chanllenge.
+    There are two solusions: resizing and adding a scroll bar.
 
     ◊hr[#:class "style-one"]
     ◊div[#:class "subtitle"]{Sökord: verktyg}

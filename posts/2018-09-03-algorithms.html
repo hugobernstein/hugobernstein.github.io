@@ -19,17 +19,19 @@
   </div>
 
 
-  ◊(->html doc #:splice? #t)
+  <section><article><h2>från en websida video</h2>
+Det finns många algoritmer.
+I de algoritmer som används för att sortera, Radix Sort är den snabbaste.
+<h3>Radix Sort(LSD)</h3>
+<h3>Radix Sort(MSD)</h3>
+<h3>Quick Sort(dual pivot)</h3>
+<h3>Quick Sort(ternary. LR ptrs)</h3></article>
+<aside></aside></section>
+
 
   <section>
-    ◊(define prev-page (previous here))
-    ◊when/splice[prev-page]{
-    <div id="prev">← <a href="◊|prev-page|">◊(select 'h1 prev-page)</a></div>
-    }
-    ◊(define next-page (next here))
-    ◊when/splice[next-page]{
-    <div id="next"><a href="◊|next-page|">◊(select 'h1 next-page)</a> →</div>
-    }
+
+
   </section>
 
   <div class="footer">

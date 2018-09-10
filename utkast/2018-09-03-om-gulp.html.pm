@@ -25,6 +25,7 @@
       ◊item{◊link["https://www.joezimjs.com/javascript/complete-guide-upgrading-gulp-4/"]{The Complete-Ish Guide to Upgrading to Gulp 4 ---2016} / ◊link["https://segmentfault.com/a/1190000005357048"]{相对完整的Gulp4升级指南}}
       ◊item{◊link["https://aaronlasseigne.com/2016/02/03/using-gulp-with-jekyll/"]{Using Gulp with Jekyll ---2016}}
       ◊item{◊link["https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/"]{How do I update to Gulp 4? ---2018}}
+      ◊item{◊link["https://github.com/gulpjs/gulp/blob/4.0/docs/recipes/minimal-browsersync-setup-with-gulp4.md"]{Minimal BrowserSync setup with Gulp 4}}
     }
   }
 }
