@@ -12,9 +12,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  line-height: 1.2;
-  font-family: sans-serif;
-  color: $base03;
 }
 
 body {
@@ -29,7 +26,7 @@ figure {
 
   img {
     vertical-align: middle;
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
 
@@ -39,6 +36,27 @@ figure {
     font-style: italic;
     font-size: smaller;
   }
+}
+
+.subtitle {
+  font-weight: lighter;
+  color: $base0;
+  font-style: italic;
+  margin-bottom: .618em;
+
+}
+
+.strong {
+  color: $blue;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+.omslag {
+  background-color: $base2;
+  border-radius: 2em 1em 4em / 0.5em 3em;
+  padding: 1.618em;
+  color: $base03;
 }
 
 a {
@@ -53,15 +71,6 @@ br {
 }
 
 hr {
-  &.spektrum {
-    border: 0;
-    height: 1px;
-    background: $base03;
-    background-image: linear-gradient(to right, $ikeablue, $ikeayellow);
-    margin-top: .618em;
-    margin-bottom: .618em;
-  }
-
   &.style-one {
     border: 0;
     height: 1px;
@@ -108,16 +117,10 @@ ol {
     list-style-type: katakana-iroha;
   }
 }
-
 section {
-  @include clearfix;
-  padding: 1.618em;
+  @include center();
+  padding: 23px;
   border: 1em solid rgba(0,0,0,0);
-  margin-bottom: 2em;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   h1, h2, h3 {
     margin-top: .382em;
@@ -139,6 +142,7 @@ section {
   article {
     @include column(2/3);
     margin-bottom: 2em;
+    line-height: normal;
     font-size: 1.2em;
     color: $base03;
 
@@ -192,27 +196,6 @@ section {
   }
 }
 
-.subtitle {
-  font-weight: lighter;
-  color: $base0;
-  font-style: italic;
-  margin-bottom: .618em;
-
-}
-
-.strong {
-  color: $blue;
-  font-weight: bold;
-  text-transform: lowercase;
-}
-
-.omslag {
-  background-color: $base2;
-  border-radius: 2em 1em 4em / 0.5em 3em;
-  padding: 1.618em;
-  color: $base03;
-}
-
 .parallax-top {
     background-image: url('../img/cover-ett.jpg');
     position: relative;
@@ -232,61 +215,18 @@ section {
 	text-align: center;
 	color: #000;
 
-  span {
-    &.border {
-  		background-color: rgba(0, 0, 0, 0.83);
-  		color: #fff;
-  		padding: 18px;
-  		font-weight: 100;
-  		font-size: 25px;
-  	}
-  }
+  span.border {
+		background-color: rgba(0, 0, 0, 0.83);
+		color: #fff;
+		padding: 18px;
+		font-family: sans-serif;
+		font-weight: 100;
+		font-size: 25px;
+	}
 
   strong {
     color: $blue;
     font-weight: bold;
-  }
-}
-
-.work {
-  figure {
-    margin-bottom: 1em;
-  }
-
-  a {
-    opacity: .5;
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
-
-.blog {
-  article {
-    margin-bottom: .618em;
-  }
-
-  p {
-    padding: 1em;
-    line-height: 1.5;
-
-    &:last-child {
-      padding: 0;
-    }
-  }
-
-  a {
-    &:hover {
-      color: $blue;
-    }
-  }
-
-  .meta {
-    padding: 0 .618em;
-
-    span {
-      color: $base0;
-    }
   }
 }
 
@@ -307,13 +247,11 @@ section {
   * {
     font-size: 16px;
   }
-
   .topnav {
     a {
       font-size: .83em;
     }
   }
-
   section {
     h1 {
       font-size: 1.618em;
@@ -333,28 +271,13 @@ section {
   }
 }
 
-@media screen and (min-width: $breakpoint-xs-width) {
-  .work {
-    figure {
-      @include column(1/2, $cycle: 2);
-    }
-  }
-}
-
-@media screen and (min-width: $breakpoint-sm-width) {
-  .blog {
-    article {
-      @include span(1/2);
-    }
-  }
-}
-
 @media screen and (min-width: 768px) {
   section {
 
     article {
       @include column(2/3);
       margin-bottom: 2em;
+      line-height: normal;
       font-size: 1.2em;
       color: $base03;
     }
@@ -375,20 +298,8 @@ section {
       }
     }
   }
-
-  .work {
-    figure {
-      @include column(1/3, $cycle: 3);
-    }
-  }
-}
-
-@media screen and (min-width: $breakpoint-lg-width) {
-  .blog {
-    article {
-      @include span(1/4);
-    }
-  }
 }
 
 // TODO
+// media från jeet-demo
+// portfolj {}
