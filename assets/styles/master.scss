@@ -6,7 +6,7 @@
 @import "_tag";
 @import "_d3";
 
-// @include debug(red);
+@include debug(lightgreen);
 
 * {
   box-sizing: border-box;
@@ -82,6 +82,41 @@ hr {
   }
 }
 
+ul {
+  &.circle {
+    list-style-type: circle;
+  }
+  &.square {
+    list-style-type: square;
+  }
+}
+
+ol {
+  &.u-roman {
+    list-style-type: upper-roman;
+  }
+  &.l-roman {
+    list-style-type: lower-roman;
+  }
+  &.greek {
+    list-style-type: lower-greek;
+  }
+  &.hebrew {
+    list-style-type: hebrew;
+  }
+  &.hiragana {
+    list-style-type: hiragana;
+  }
+  &.hiragana-iroha {
+    list-style-type: hiragana-iroha;
+  }
+  &.katakana {
+    list-style-type: katakana;
+  }
+  &.katakana-iroha {
+    list-style-type: katakana-iroha;
+  }
+}
 section {
   @include center();
   padding: 23px;
