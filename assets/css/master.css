@@ -235,6 +235,34 @@ header, footer {
   color: #fdf6e3;
   text-align: center; }
 
+.footer {
+  background-image: url("../img/cover-ett.jpg");
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.83;
+  padding: 2em;
+  background-color: #002b36;
+  color: white;
+  text-align: center;
+  border-radius: 2em 1em 4em / 0.5em 3em; }
+  .footer strong {
+    color: #FFDA1A;
+    font-size: 1em; }
+  .footer h2, .footer h3, .footer p {
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px #000; }
+  .footer h2 {
+    font-size: 1.618em; }
+  .footer h3 {
+    font-size: 1.2em;
+    color: #268bd2; }
+
 @media all and (max-width: 640px) {
   #main, #page {
     -webkit-flex-flow: column;
@@ -314,7 +342,6 @@ header, footer {
 
 body {
   font-family: sans-serif;
-  font-size: 16px;
   margin: 0; }
 
 figure {
@@ -381,6 +408,13 @@ ol.katakana {
 
 ol.katakana-iroha {
   list-style-type: katakana-iroha; }
+
+blockquote {
+  padding: .618em;
+  color: #073642;
+  font-size: 1.2em;
+  font-family: monospace;
+  background-color: #fdf6e3; }
 
 section {
   padding: 1.618em;
@@ -513,6 +547,7 @@ section {
     color: whitesmoke;
     text-transform: capitalize; }
   .headerwrap sup {
+    font-size: .618em;
     color: #FF7F3B;
     font-weight: 100;
     text-transform: lowercase; }
@@ -578,24 +613,11 @@ section {
   .blog .meta span {
     color: #839496; }
 
-.footer {
-  position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 2em;
-  background-color: #002b36;
-  color: white;
-  text-align: center;
-  border-radius: 2em 1em 4em / 0.5em 3em; }
-
 @media screen and (min-width: 320px) {
   .headerwrap {
     left: 0; }
     .headerwrap span {
       font-size: 1.2em; }
-  * {
-    font-size: 16px; }
   .topnav a {
     font-size: .83em; }
   section h1 {
@@ -632,7 +654,8 @@ section {
       clear: both; }
   .bgimg-1,
   .bgimg-2,
-  .bgimg-3 {
+  .bgimg-3,
+  .footer {
     background-attachment: scroll; } }
 
 @media screen and (min-width: 414px) {
@@ -738,7 +761,7 @@ section {
     .work figure:nth-child(3n + 1) {
       clear: both; } }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1025px) {
   .headerwrap span {
     font-size: 3.236em; }
   .blog article {
@@ -777,4 +800,6 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../img/img_parallax-bottom.jpg");
-    min-height: 400px; } }
+    min-height: 400px; }
+  .footer {
+    background-attachment: fixed; } }

@@ -65,6 +65,42 @@ header, footer {
   text-align: center;
 }
 
+.footer {
+  background-image: url('../img/cover-ett.jpg');
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.83;
+  padding: 2em;
+  background-color: $base03;
+  color: white;
+  text-align: center;
+  border-radius: 2em 1em 4em / 0.5em 3em;
+
+  strong {
+    color: $ikeayellow;
+    font-size: 1em;
+  }
+
+  h2, h3, p {
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px #000;
+  }
+
+  h2 {
+    font-size: 1.618em;
+  }
+  h3 {
+    font-size: 1.2em;
+    color: $blue;
+  }
+}
+
 @media all and (max-width: 640px) {
   #main, #page {
     -webkit-flex-flow: column;

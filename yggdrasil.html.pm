@@ -46,6 +46,7 @@
       ◊item{◊link["posts/2018-09-04-maskininlrning.html"]{Machine learning}}
       ◊item{◊link["posts/2018-08-27-data-visualization.html"]{Data visualization using D3.js}}
       ◊item{◊link["posts/2018-08-27-smart-contract.html"]{Smart contract}}
+      ◊item{◊link["https://www.artificialintelligence-news.com/2018/07/31/ai-personality-eye-movements/"]{AI can determine your personality through eye movements ---2018}}
 
     }
   }
