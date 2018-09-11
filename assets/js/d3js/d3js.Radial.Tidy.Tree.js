@@ -7,10 +7,10 @@ var stratify = d3.stratify()
     .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
 
 var tree = d3.tree()
-    .size([2 * Math.PI, 400])
+    .size([2 * Math.PI, 500])
     .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
-d3.csv("../../d3js.rtt.csv", function(error, data) {
+d3.csv("../../data/flare.csv", function(error, data) {
   if (error) throw error;
 
   var root = tree(stratify(data));

@@ -1,30 +1,39 @@
 @import "_var";
 
-// rtt
+// .node {
+//   cursor: pointer;
+// }
+//
+// .node circle {
+//   fill: #fff;
+//   stroke: steelblue;
+//   stroke-width: 1.5px;
+// }
+//
+// .node text {
+//   font: 10px sans-serif;
+// }
+//
+// .link {
+//   fill: none;
+//   stroke: #ccc;
+//   stroke-width: 1.5px;
+// }
 
-svg {
-  display: block;
-  padding: 1em;
+.node circle {
+  fill: #999;
 }
 
-.node {
-  circle {
-    fill: #999;
-  }
-
-  text {
-    font: .618em sans-serif;
-  }
+.node text {
+  font: 10px sans-serif;
 }
 
-.node--internal {
-  circle {
-    fill: #555;
-  }
+.node--internal circle {
+  fill: #555;
+}
 
-  text {
-    text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
-  }
+.node--internal text {
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
 }
 
 .link {
@@ -33,36 +42,3 @@ svg {
   stroke-opacity: 0.4;
   stroke-width: 1.5px;
 }
-
-line {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 1.5;
-}
-
-circle {
-  fill: #fff;
-  stroke: #000;
-  stroke-width: .5;
-}
-
-.dataviz {
-  display: block;
-  border: 2em solid rgba(0,0,0,0);
-  text-align: center;
-  h1 {
-    text-align: center;
-    font-size: 1.618em;
-    font-weight: 800;
-    color: $base03;
-    text-transform: capitalize;
-  }
-}
-
-// @media screen and (min-width: 600px) {
-//   .node {
-//     text {
-//       font: .382em sans-serif;
-//     }
-//   }
-// }

@@ -28,26 +28,32 @@
 ◊div[#:class "dataviz"]{
   ◊h1{Tools used/mentioned in this project}
   首页还是放小分辨率图片比较好，加一个链接到D3js生成的页面。这样的好处是整个布局比较和谐。
-  ◊svg[#:width "768" #:height "1060"]
-  ◊script[#:src "assets/js/d3.v4.min.js"]
-  ◊script[#:src "assets/js/d3js.rtt.js"]
+  ◊link["https://bl.ocks.org/mbostock/4063550"]{source}
+  ◊svg[#:id "sketchpad"]
+  ◊script[#:src "https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.10/d3.min.js"]
+  ◊script[#:src "assets/js/hugo.rtt.js"]
 }
 
 ◊section{
   ◊h1{uppgiftslista / TODOs}
   ◊article{
     ◊h2{◊link["https://en.wikipedia.org/wiki/De_novo_protein_structure_prediction"]{De novo protein structure prediction}}
-    In computational biology, de novo protein structure prediction refers to an algorithmic process by which protein tertiary structure is predicted from its amino acid primary sequence.
-    De novo methods tend to require vast computational resources, and have thus only been carried out for relatively small proteins. De novo protein structure modeling is distinguished from Template-based modeling (TBM) by the fact that no solved homolog to the protein of interest is used, making efforts to predict protein structure from amino acid sequence exceedingly difficult.
+    ◊p{In computational biology, de novo protein structure prediction refers to an algorithmic process by which protein tertiary structure is predicted from its amino acid primary sequence.
+    De novo methods tend to require vast computational resources, and have thus only been carried out for relatively small proteins. De novo protein structure modeling is distinguished from Template-based modeling (TBM) by the fact that no solved homolog to the protein of interest is used, making efforts to predict protein structure from amino acid sequence exceedingly difficult.}
+    ◊h2{◊link["https://www.npmjs.com/package/jsdom"]{jsdom}}
+    ◊p{◊em{jsdom} is a pure-JavaScript implementation of many web standards, notably the WHATWG DOM and HTML Standards, for use with Node.js.}
+    ◊p{Perhaps, it can be used to generate SVG files using ◊i{node jsdom.*.js > output.svg}.}
   }
 }
 
 ◊section{
+
   ◊article{
-         ◊h2{headline}
-          ◊p{this is a test.
-             it turns to another line.}
-          ◊p{this a another paragraph}}
+    ◊h2{headline}
+    ◊p{this is a test.
+        it turns to another line.}
+    ◊p{this a another paragraph}}
+  ◊aside{}
 }
 
 ◊section{
