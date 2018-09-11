@@ -3,21 +3,33 @@
 ◊(define-meta title "")
 ◊(define-meta author "Hugo Bernstein")
 ◊(define-meta action "")
-◊(define-meta desc1 "first, I would like to build a front-end structure")
+◊(define-meta caption2 "maskininläring")
+◊(define-meta caption3 "data visualization")
+◊(define-meta desc1 "This tech blog is about molecular biology, protein engineering, clinical laboratory medicine & machine learning, plus data visualization.")
 ◊(define-meta desc2 "then, data visualization plugins will be deployed.")
 ◊(define-meta desc3 "the most important thing is content.")
 
 ◊div[#:class "slideshow-container"]{
+
   ◊div[#:class "mySlides fade"]{
-    ◊img[#:src "assets/img/cover-ett.jpg" #:style "width:100%"]
+    ◊img[#:src "assets/img/staden.jpg" #:style "width:100%"]
+    ◊div[#:class "headerwrap"]{
+      ◊span{◊strong{Hugos} Tekniska Anteckningar}
+    }
     ◊div[#:class "text"]{◊(hash-ref metas 'desc1)}
   }
   ◊div[#:class "mySlides fade"]{
     ◊img[#:src "assets/img/cover-tva.jpg" #:style "width:100%"]
+    ◊div[#:class "headerwrap"]{
+      ◊span{◊(hash-ref metas 'caption2)}
+    }
     ◊div[#:class "text"]{◊(hash-ref metas 'desc2)}
   }
   ◊div[#:class "mySlides fade"]{
-    ◊img[#:src "assets/img/cover-tre.jpg" #:style "width:100%"]
+    ◊img[#:src "assets/img/cover-ett.jpg" #:style "width:100%"]
+    ◊div[#:class "headerwrap"]{
+      ◊span{◊(hash-ref metas 'caption3)}
+    }
     ◊div[#:class "text"]{◊(hash-ref metas 'desc3)}
   }
   ◊a[#:class "prev" #:onclick "plusSlides(-1)"]{❮}
