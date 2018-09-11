@@ -2,6 +2,7 @@ const gulp = require('gulp'),
       pug = require('gulp-pug'),
       html2pug = require('gulp-html2pug'),
       sass = require('gulp-sass'),
+      jeet = require('jeet'),
       sh = require('shelljs'),
       del = require('del');
 
@@ -12,7 +13,7 @@ const paths = {
   },
   pug: {
     src: 'assets/pugs/*.pug',
-    dest: 'Valhall'
+    dest: 'assets/html/dist'
   },
   tex: {
     src: 'orgutkasten/*.tex',
@@ -73,29 +74,40 @@ export function styles() {
     .pipe(gulp.dest(paths.styles.dest));
 }
 
-export function tillpug() {
-  return gulp.src(paths.tmphtml.src)
-    .pipe(html2pug())
-    .pipe(gulp.dest(paths.tmphtml.dest));
+// med pug.js, en html preprocessor
+export function utvecklajeetstill() {
+  return gulp.src('assets/styles/jeet-demo.scss')
+    .pipe(sass())
+    .pipe(gulp.dest('assets/css/'));
 }
 
-export function tillhtml() {
+export function utvecklajeettillpug() {
+  return gulp.src('assets/html/src/jeet-demo.html')
+    .pipe(html2pug())
+    .pipe(gulp.dest('assets/pugs/src'));
+}
+
+export function pugsidor() {
   return gulp.src(paths.pug.src)
     .pipe(pug())
     .pipe(gulp.dest(paths.pug.dest));
 }
 
+// Övervakning
 function watch() {
   gulp.watch(paths.tex.src, deltatex);
-  gulp.watch(paths.styles.src, styles, tillhtml);
-  gulp.watch(paths.pug.src, tillhtml);
-  gulp.watch('Valhall/**/*.md', tillhtml);
+  gulp.watch(paths.styles.src, styles, pugsidor);
+  gulp.watch([paths.pug.src, 'orgutkasten/**/*.md'], pugsidor);
+  gulp.watch('assets/styles/jeet-demo.scss', utvecklajeetstill);
   gulp.watch(paths.pollen.src, publicera);
 }
 
+// Uppgifter
 gulp.task('rensa', gulp.series(texsamlare, pdfsamlare));
 
-const build = gulp.series(styles, tillhtml, publicera, deltatex, watch);
+gulp.task('utvecklajeet', gulp.series(utvecklajeetstill, watch));
+
+const build = gulp.series(styles, pugsidor, publicera, deltatex, watch);
 gulp.task('default', build);
 
 // min kod blir bättre och bättre

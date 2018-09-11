@@ -23,6 +23,7 @@
        ◊item{◊link["https://www.joezimjs.com/javascript/complete-guide-upgrading-gulp-4/"]{The Complete-Ish Guide to Upgrading to Gulp 4} / ◊link["https://segmentfault.com/a/1190000005357048"]{相对完整的Gulp4升级指南}}
        ◊item{◊link["https://www.learn-js.org/en/Callbacks"]{callbacks-learn javascript}}
        ◊item{◊link["http://recurial.com/programming/understanding-callback-functions-in-javascript/"]{Understanding callback functions in Javascript}}
+       ◊item{◊link["https://github.com/mojotech/jeet/wiki/Migrating-from-6-to-7"]{jeet.js: Migrating from 6 to 7}}
      }
   }
 
