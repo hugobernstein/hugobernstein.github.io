@@ -5,8 +5,9 @@
 @import "_id";
 @import "_tag";
 @import "_d3";
+@import "_parallax";
 
-@include debug(lightgreen);
+// @include debug(lightblue);
 
 * {
   box-sizing: border-box;
@@ -209,8 +210,18 @@ section {
 .omslag {
   background-color: $base2;
   border-radius: 2em 1em 4em / 0.5em 3em;
-  padding: 1.618em;
-  color: $base03;
+  padding: 1em;
+
+
+  ol {
+    list-style-position: inside;
+
+    li {
+      color: $base02;
+      font-size: .618em;
+    }
+  }
+
 }
 
 .parallax-top {
@@ -222,6 +233,80 @@ section {
   	background-repeat: no-repeat;
   	background-size: cover;
     min-height: 100%;
+}
+
+.parallax-m {
+    background-image: url('../img/parallax-m.jpg');
+    position: relative;
+  	// opacity: 0.65;
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+    min-height: 100%;
+}
+
+.headerwrap {
+  position: absolute;
+  box-sizing: border-box;
+  border: 2em solid rgba(0,0,0,0);
+  left: 25%;
+  top: 25%;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #000;
+
+  strong {
+    font-size: 1em;
+    color: $ikeayellow;
+  }
+
+  span {
+    font-size: 3em;
+    background-color: rgba(0, 0, 0, 0.83);
+    border-radius: 2em 1em 4em / 0.5em 3em;
+    padding: 0 1em;
+    color: whitesmoke;
+    text-transform: capitalize;
+  }
+
+  sup {
+    color: $orange1;
+    font-weight: 100;
+    text-transform: lowercase;
+  }
+
+  h2 {
+    color: white;
+    padding-right: 1em;
+    // background-color: rgba(0, 0, 0, 0.83);
+  }
+
+  h4 {
+    color: white;
+    font-size: 1.25em;
+  }
+
+  p {
+    color: white;
+  }
+}
+
+.beskrivning {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  border: .618em solid rgba(0,0,0,0);
+  text-align: center;
+
+  h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+
+  p {
+    font-size: 1.618em;
+  }
 }
 
 .caption {
@@ -304,6 +389,14 @@ section {
 }
 
 @media screen and (min-width: 320px) {
+  .headerwrap {
+    left: 0;
+    span {
+      font-size: 1.2em;
+    }
+
+  }
+
   * {
     font-size: 16px;
   }
@@ -331,6 +424,12 @@ section {
       @include center();
     }
   }
+
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
+  }
 }
 
 @media screen and (min-width: $breakpoint-xs-width) {
@@ -339,6 +438,13 @@ section {
       @include column(1/2, $cycle: 2);
     }
   }
+
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
+  }
+
 }
 
 @media screen and (min-width: $breakpoint-sm-width) {
@@ -347,9 +453,24 @@ section {
       @include span(1/2);
     }
   }
+
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
+  }
+
 }
 
 @media screen and (min-width: 768px) {
+  .headerwrap {
+    left: 7%;
+    span {
+      font-size: 1.618em;
+    }
+
+  }
+
   section {
 
     article {
@@ -384,11 +505,52 @@ section {
 }
 
 @media screen and (min-width: $breakpoint-lg-width) {
+  .headerwrap {
+    span {
+      font-size: 1.618em *2;
+    }
+
+  }
+
   .blog {
     article {
       @include span(1/4);
     }
   }
+
+  .bgimg-1 {
+  	position: relative;
+  	// opacity: 0.65;
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-image: url("img/img_parallax-top.jpg");
+  	min-height: 100%;
+  }
+
+  .bgimg-2 {
+  	position: relative;
+  	opacity: 0.65;
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-image: url("../img/img_parallax-middle.jpg");
+  	min-height: 400px;
+  }
+
+  .bgimg-3 {
+  	position: relative;
+  	opacity: 0.65;
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-image: url("../img/img_parallax-bottom.jpg");
+  	min-height: 400px;
+  }
+
 }
 
 // TODO

@@ -275,8 +275,34 @@ header, footer {
   stroke-opacity: 0.4;
   stroke-width: 1.5px; }
 
-* {
-  background: rgba(144, 238, 144, 0.05); }
+.bgimg-1 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("img/img_parallax-top.jpg");
+  min-height: 100%; }
+
+.bgimg-2 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/img_parallax-middle.jpg");
+  min-height: 400px; }
+
+.bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/img_parallax-bottom.jpg");
+  min-height: 400px; }
 
 * {
   box-sizing: border-box;
@@ -441,8 +467,12 @@ section {
 .omslag {
   background-color: #eee8d5;
   border-radius: 2em 1em 4em / 0.5em 3em;
-  padding: 1.618em;
-  color: #002b36; }
+  padding: 1em; }
+  .omslag ol {
+    list-style-position: inside; }
+    .omslag ol li {
+      color: #073642;
+      font-size: .618em; }
 
 .parallax-top {
   background-image: url("../img/cover-ett.jpg");
@@ -452,6 +482,59 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100%; }
+
+.parallax-m {
+  background-image: url("../img/parallax-m.jpg");
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%; }
+
+.headerwrap {
+  position: absolute;
+  box-sizing: border-box;
+  border: 2em solid rgba(0, 0, 0, 0);
+  left: 25%;
+  top: 25%;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #000; }
+  .headerwrap strong {
+    font-size: 1em;
+    color: #FFDA1A; }
+  .headerwrap span {
+    font-size: 3em;
+    background-color: rgba(0, 0, 0, 0.83);
+    border-radius: 2em 1em 4em / 0.5em 3em;
+    padding: 0 1em;
+    color: whitesmoke;
+    text-transform: capitalize; }
+  .headerwrap sup {
+    color: #FF7F3B;
+    font-weight: 100;
+    text-transform: lowercase; }
+  .headerwrap h2 {
+    color: white;
+    padding-right: 1em; }
+  .headerwrap h4 {
+    color: white;
+    font-size: 1.25em; }
+  .headerwrap p {
+    color: white; }
+
+.beskrivning {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  border: 0.618em solid rgba(0, 0, 0, 0);
+  text-align: center; }
+  .beskrivning h2 {
+    font-size: 2em;
+    margin-bottom: 1em; }
+  .beskrivning p {
+    font-size: 1.618em; }
 
 .caption {
   position: absolute;
@@ -507,6 +590,10 @@ section {
   border-radius: 2em 1em 4em / 0.5em 3em; }
 
 @media screen and (min-width: 320px) {
+  .headerwrap {
+    left: 0; }
+    .headerwrap span {
+      font-size: 1.2em; }
   * {
     font-size: 16px; }
   .topnav a {
@@ -542,7 +629,11 @@ section {
     section aside::after {
       content: '';
       display: table;
-      clear: both; } }
+      clear: both; }
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll; } }
 
 @media screen and (min-width: 414px) {
   .work figure {
@@ -564,7 +655,11 @@ section {
       margin-right: 0%;
       float: right; }
     .work figure:nth-child(2n + 1) {
-      clear: both; } }
+      clear: both; }
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll; } }
 
 @media screen and (min-width: 600px) {
   .blog article {
@@ -577,9 +672,17 @@ section {
     .blog article::after {
       content: '';
       display: table;
-      clear: both; } }
+      clear: both; }
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll; } }
 
 @media screen and (min-width: 768px) {
+  .headerwrap {
+    left: 7%; }
+    .headerwrap span {
+      font-size: 1.618em; }
   section article {
     float: left;
     clear: none;
@@ -635,7 +738,9 @@ section {
     .work figure:nth-child(3n + 1) {
       clear: both; } }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1366px) {
+  .headerwrap span {
+    font-size: 3.236em; }
   .blog article {
     float: left;
     clear: none;
@@ -646,4 +751,30 @@ section {
     .blog article::after {
       content: '';
       display: table;
-      clear: both; } }
+      clear: both; }
+  .bgimg-1 {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("img/img_parallax-top.jpg");
+    min-height: 100%; }
+  .bgimg-2 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/img_parallax-middle.jpg");
+    min-height: 400px; }
+  .bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/img_parallax-bottom.jpg");
+    min-height: 400px; } }
