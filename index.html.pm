@@ -50,15 +50,17 @@
   ◊div[#:class "text"]{aka. housekeeping techniques}
 }
 
-
-◊div[#:class "dataviz"]{
-  ◊h1{Tools used/mentioned in this project}
-  首页还是放小分辨率图片比较好，加一个链接到D3js生成的页面。这样的好处是整个布局比较和谐。
-  ◊link["https://bl.ocks.org/mbostock/4063550"]{source}
-  ◊svg[#:id "sketchpad"]
-  ◊script[#:src "https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.10/d3.min.js"]
-  ◊script[#:src "assets/js/hugo.rtt.js"]
+◊section{
+  ◊div[#:class "dataviz"]{
+    ◊h1{Tools used/mentioned in this project}
+    首页还是放小分辨率图片比较好，加一个链接到D3js生成的页面。这样的好处是整个布局比较和谐。
+    ◊link["https://bl.ocks.org/mbostock/4063550"]{source}
+    ◊svg[#:id "sketchpad"]
+    ◊script[#:src "https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.10/d3.min.js"]
+    ◊script[#:src "assets/js/hugo.rtt.js"]
+  }
 }
+
 
 ◊section{
   ◊h1{uppgiftslista / TODOs}

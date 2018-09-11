@@ -738,7 +738,7 @@ section {
     .work figure:nth-child(3n + 1) {
       clear: both; } }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1025px) {
   .headerwrap span {
     font-size: 3.236em; }
   .blog article {
