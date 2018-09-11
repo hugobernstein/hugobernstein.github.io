@@ -11,6 +11,10 @@ const paths = {
     src: 'assets/styles/**/*.scss',
     dest: 'assets/css'
   },
+  img: {
+    src: 'Valhall/img/*.{jpg,png}',
+    dest: 'assets/img'
+  },
   pug: {
     src: 'assets/pugs/*.pug',
     dest: 'assets/html/dist'
