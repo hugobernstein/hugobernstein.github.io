@@ -3,18 +3,18 @@
 ◊(define-meta title "")
 ◊(define-meta author "Hugo Bernstein")
 ◊(define-meta action "")
-◊(define-meta caption2 "maskininläring")
-◊(define-meta caption3 "data visualization")
+◊(define-meta caption2 "Det inkluderar maskininläring")
+◊(define-meta caption3 "Det inkluderar också datavisualisering")
 ◊(define-meta desc1 "This tech blog is about molecular biology, protein engineering, clinical laboratory medicine & machine learning, plus data visualization.")
-◊(define-meta desc2 "then, data visualization plugins will be deployed.")
-◊(define-meta desc3 "the most important thing is content.")
+◊(define-meta desc2 "It includes Machine Learning.")
+◊(define-meta desc3 "it includes data visualization as well.")
 
 ◊div[#:class "slideshow-container"]{
 
   ◊div[#:class "mySlides fade"]{
     ◊img[#:src "assets/img/staden.jpg" #:style "width:100%"]
     ◊div[#:class "headerwrap"]{
-      ◊span{◊strong{Hugos} Tekniska Anteckningar}
+      ◊span{◊strong{Hugo}s Tekniska Anteckningar◊sup{.α}}
     }
     ◊div[#:class "text"]{◊(hash-ref metas 'desc1)}
   }
@@ -37,6 +37,20 @@
   ◊script[#:src "assets/js/coverimg.js"]
 }
 
+◊div[#:class "beskrivning"]{
+  ◊p{
+    ◊(hash-ref metas 'desc1)
+  }
+}
+
+◊div[#:class "bgimg-2"]{
+  ◊div[#:class "headerwrap"]{
+    ◊span{Hushållning Tekniker}
+  }
+  ◊div[#:class "text"]{aka. housekeeping techniques}
+}
+
+
 ◊div[#:class "dataviz"]{
   ◊h1{Tools used/mentioned in this project}
   首页还是放小分辨率图片比较好，加一个链接到D3js生成的页面。这样的好处是整个布局比较和谐。
@@ -58,14 +72,42 @@
   }
 }
 
-◊section{
+◊div[#:class "bgimg-2"]{
+  ◊div[#:class "headerwrap"]{
+    ◊span{Förutsättningar}
+  }
+  ◊div[#:class "text"]{aka. Prerequisites}
+}
 
+◊section{
   ◊article{
-    ◊h2{headline}
-    ◊p{this is a test.
-        it turns to another line.}
-    ◊p{this a another paragraph}}
-  ◊aside{}
+    ◊h2{Språk}
+    ◊ol[#:class "hebrew"]{
+      ◊item{In this blog, English, Swedish and other languages are used, so web translators are helpful.
+      I prefer ◊link["https://translate.yandex.com"]{Yandex} and ◊link["https://bing.com/translator"]{Bing}.}
+      ◊item{I know some of you guys will fetch my source code. Well, there are html, scss, javascript, emacs-lisp & racket/pollen. Enjoy yourself!}
+    }
+    ◊h2{Professionell}
+    ◊ol[#:class "hebrew"]{
+      ◊item{◊link["https://sv.wikipedia.org/wiki/Centrala_dogmen"]{Den centrala dogmen} är grunden.}
+      ◊item{Matematik analys är inte nödvändigt, men statistik och linjär algebra är viktiga.}
+    }
+  }
+
+  ◊aside[#:class "omslag"]{
+    ◊h2{Ordlista}
+    ◊ol[#:class "greek"]{
+      ◊item{språk: languages}
+      ◊item{professionell: professional}
+      ◊item{är inte: is not}
+      ◊item{nödvändigt: nessesary}
+      ◊item{Den Centrala dogmen: The Central dogma/中心法则}
+      ◊item{grunden: the foundation}
+      ◊item{linjär algebra: 线性代数}
+      ◊item{viktiga: important(pl.)}
+    }
+
+  }
 }
 
 ◊section{
