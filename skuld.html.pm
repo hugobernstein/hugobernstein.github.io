@@ -15,7 +15,10 @@
   ◊article{
     ◊hr[#:class "style-one"]
     ◊div[#:class "subtitle"]{Sökord: metod}
-
+    ◊h2{}
+      ◊p{
+        language generation and full-spectrum language 
+      }
 
     ◊hr[#:class "style-one"]
     ◊div[#:class "subtitle"]{Sökord: verktyg}
