@@ -43,3 +43,10 @@
 (define (root . elements)
    (txexpr 'main empty (decode-elements elements
       #:string-proc (compose1 smart-quotes smart-dashes))))
+
+(define ref "Referenser")
+(define mer "Mer Intressanta Artiklar")
+(define ant "Anteckningar")
+(define syf "Syftet")
+(define desc "Beskrivningar")
+(define filo "Filosofi/Φιλοσοφία")

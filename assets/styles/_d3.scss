@@ -42,3 +42,11 @@
   stroke-opacity: 0.4;
   stroke-width: 1.5px;
 }
+
+#vis {
+  svg {
+    border-radius: 10em 5em 20em / 2.5em 15em;
+    border: 1px dashed $base0;
+  }
+
+}

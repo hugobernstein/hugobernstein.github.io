@@ -19,6 +19,10 @@
 (define author "Hugo Bernstein")
 (define ref "Referenser")
 (define mer "Mer Intressanta Artiklar")
+(define ant "Anteckningar")
+(define syf "Syftet")
+(define desc "Beskrivningar")
+(define filo "Filosofi/Φιλοσοφία")
 
 (module setup racket/base
   (provide (all-defined-out))

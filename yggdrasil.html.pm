@@ -28,6 +28,7 @@
       ◊item{◊link["posts/2018-08-28-how-to-handle-dynamic-json-data.html"]{Database: JSON}}
       ◊item{◊link["posts/2018-09-03-algorithms.html"]{Algorithms}}
       ◊item{◊link["posts/2018-08-24-future-works.html"]{TODOs}}
+      ◊item{◊link["posts/2018-09-13-programming-pollen-hushallning.html"]{using pollen: programming pollen}}
     }
 
     ◊h3{Urd}

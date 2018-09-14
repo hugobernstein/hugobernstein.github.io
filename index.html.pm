@@ -5,7 +5,7 @@
 ◊(define-meta action "")
 ◊(define-meta caption2 "Det inkluderar maskininläring")
 ◊(define-meta caption3 "Det inkluderar också datavisualisering")
-◊(define-meta desc1 "This tech blog is about molecular biology, protein engineering, clinical laboratory medicine & machine learning, plus data visualization.")
+◊(define-meta desc1 "hugo's technical notes")
 ◊(define-meta desc2 "It includes Machine Learning.")
 ◊(define-meta desc3 "it includes data visualization as well.")
 
@@ -39,8 +39,9 @@
 
 ◊div[#:class "beskrivning"]{
   ◊p{
-    ◊(hash-ref metas 'desc1)
+    This tech blog is about molecular biology, protein engineering, clinical laboratory medicine & machine learning, plus data visualization.
   }
+  ◊p{個人不喜歡基於所謂智慧型手機的閱讀，比較主流的說法為碎片化知識獲取，我更偏好紙質或高分辨率終端的，因為畢竟完成了某些種儀式或過場，其結果是主觀意願發生了改變。於是這裡所用的CSS對768px以下的顯示器很苛刻，我定義768px(iPad air 2豎版)為閥值，望將就。}
 }
 
 ◊div[#:class "bgimg-2"]{
@@ -51,26 +52,19 @@
 }
 
 ◊section{
-  ◊div[#:class "dataviz"]{
-    ◊h1{Tools used/mentioned in this project}
-    首页还是放小分辨率图片比较好，加一个链接到D3js生成的页面。这样的好处是整个布局比较和谐。
-    ◊link["https://bl.ocks.org/mbostock/4063550"]{source}
-    ◊svg[#:id "sketchpad"]
-    ◊script[#:src "https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.10/d3.min.js"]
-    ◊script[#:src "assets/js/hugo.rtt.js"]
-  }
-}
-
-
-◊section{
-  ◊h1{uppgiftslista / TODOs}
   ◊article{
-    ◊h2{◊link["https://en.wikipedia.org/wiki/De_novo_protein_structure_prediction"]{De novo protein structure prediction}}
-    ◊p{In computational biology, de novo protein structure prediction refers to an algorithmic process by which protein tertiary structure is predicted from its amino acid primary sequence.
-    De novo methods tend to require vast computational resources, and have thus only been carried out for relatively small proteins. De novo protein structure modeling is distinguished from Template-based modeling (TBM) by the fact that no solved homolog to the protein of interest is used, making efforts to predict protein structure from amino acid sequence exceedingly difficult.}
-    ◊h2{◊link["https://www.npmjs.com/package/jsdom"]{jsdom}}
-    ◊p{◊em{jsdom} is a pure-JavaScript implementation of many web standards, notably the WHATWG DOM and HTML Standards, for use with Node.js.}
-    ◊p{Perhaps, it can be used to generate SVG files using ◊i{node jsdom.*.js > output.svg}.}
+    ◊h2{yggdrasil}
+    ◊figure{
+      ◊img[#:src "mindmaps/hugosyggdrasil.svg"]
+    }
+  }
+  ◊aside[#:class "omslag"]{
+    ◊h2{Definitioner}
+    ◊ol[#:class "greek"]{
+      ◊item{yggdrasil <- tree/file-structure;}
+      ◊item{kallor <- source/src;}
+      ◊item{Valhall <- backup/bak;}
+    }
   }
 }
 

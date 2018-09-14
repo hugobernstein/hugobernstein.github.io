@@ -2,11 +2,11 @@ SOURCE = "."
 CONFIG = {
   'sida' => File.join(SOURCE),
   'sida_ext' => "html.pm",
-  'post' => File.join(SOURCE, "orgutkasten"),
+  'post' => File.join(SOURCE, "dotorg"),
   'post_ext' => "org",
-  'pollenpost' => File.join(SOURCE, "utkast"),
+  'pollen_inlagg' => File.join(SOURCE, "dotpm"),
   'pollen_ext' => "html.pm",
-  'scrbl' => File.join(SOURCE, "scrblutkasten"),
+  'scrbl' => File.join(SOURCE, "dotscrbl"),
   'scrbl_ext' => "scrbl"
 }
 
@@ -116,7 +116,7 @@ namespace :utkast do
     namespace :post do
       desc "Att skapa ett nyt artikel"
       task :skapa, :title do |t, args|
-        FileUtils.mkdir "#{CONFIG['pollenpost']}" unless FileTest.directory?(CONFIG['pollenpost'])
+        FileUtils.mkdir "#{CONFIG['pollen_inlagg']}" unless FileTest.directory?(CONFIG['pollen_inlagg'])
         if args.title
           title = args.title
         else
@@ -126,7 +126,7 @@ namespace :utkast do
         begin
           date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
         end
-        filename = File.join(CONFIG['pollenpost'], "#{date}-#{slug}.#{CONFIG['pollen_ext']}")
+        filename = File.join(CONFIG['pollen_inlagg'], "#{date}-#{slug}.#{CONFIG['pollen_ext']}")
 
         if File.exist?(filename)
           abort("Det avbryts!!") if ask("#{filename} already exists. Do you want to overwrite?", ['j','N'] ) == 'n'

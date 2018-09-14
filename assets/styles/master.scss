@@ -62,6 +62,15 @@ hr {
     margin-bottom: .618em;
   }
 
+  &.spektrum1 {
+    border: 0;
+    height: 1px;
+    background: $base03;
+    background-image: linear-gradient(to right, $ikeayellow, $orange1);
+    margin-top: .618em;
+    margin-bottom: .618em;
+  }
+
   &.style-one {
     border: 0;
     height: 1px;

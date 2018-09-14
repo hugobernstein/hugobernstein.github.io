@@ -68,9 +68,15 @@ export function hamtaorgmodeutkast(callback){
 }
 
 export function publicera(done) {
-  sh.exec('raco pollen publish utkast posts');
+  sh.exec('raco pollen render utkast/*.pm && raco pollen publish utkast posts');
   done();
 }
+
+export function publiceranytt(done) {
+  sh.exec('raco pollen render utkast/2018-09-13-programmable-programming-language.html.pm && raco pollen publish utkast posts');
+  done();
+}
+
 
 export function styles() {
   return gulp.src('assets/styles/master.scss')
@@ -86,7 +92,7 @@ export function utvecklajeetstill() {
 }
 
 export function utvecklajeettillpug() {
-  return gulp.src('assets/html/src/jeet-demo.html')
+  return gulp.src('assets/html/src/Understanding and Using Ruby Rake.html')
     .pipe(html2pug())
     .pipe(gulp.dest('assets/pugs/src'));
 }
