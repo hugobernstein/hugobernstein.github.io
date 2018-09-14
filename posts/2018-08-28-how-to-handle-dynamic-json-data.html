@@ -9,8 +9,8 @@
 </head>
 
 <body>
-  <div class="topnav">
-    <a class="active" href="../index.html">Hem</a>
+  <div id="nav" class="inlaggstopnav">
+    <a href="../index.html">Hem</a>
     <a href="../urd.html">Urd</a>
     <a href="../verdandi.html">Verdandi</a>
     <a href="../skuld.html">Skuld</a>
