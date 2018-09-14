@@ -9,6 +9,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    text-shadow: 2px 2px 2px #000;
     &:hover {
       background-color: $ikeablue;
       color: $ikeayellow;
@@ -19,7 +20,7 @@
     }
     &.right {
       float: right;
-      color: $cyan;
+      color: $ikeayellow;
       &:hover {
         color: $ikeayellow;
       }

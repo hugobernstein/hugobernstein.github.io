@@ -41,7 +41,7 @@
   ◊p{
     This tech blog is about molecular biology, protein engineering, clinical laboratory medicine & machine learning, plus data visualization.
   }
-  ◊p{個人不喜歡基於所謂智慧型手機的閱讀，比較主流的說法為碎片化知識獲取，我更偏好紙質或高分辨率終端的，因為畢竟完成了某些種儀式或過場，其結果是主觀意願發生了改變。於是這裡所用的CSS對768px以下的顯示器很苛刻，我定義768px(iPad air 2豎版)為閥值，望將就。}
+  
 }
 
 ◊div[#:class "bgimg-2"]{
