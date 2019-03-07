@@ -3,6 +3,7 @@ const gulp = require('gulp'),
       html2pug = require('gulp-html2pug'),
       sass = require('gulp-sass'),
       jeet = require('jeet'),
+      browserSync = require('browser-sync'),
       sh = require('shelljs'),
       del = require('del');
 
@@ -36,6 +37,8 @@ const paths = {
     dest: 'Valhall/pugs'
   }
 }
+
+const server = browserSync.create();
 
 export function deltatex(callback) {
   sh.exec('for f in $(find orgutkasten -iname *.tex); do xelatex $f; done', callback);
@@ -84,6 +87,9 @@ export function styles() {
     .pipe(gulp.dest(paths.styles.dest));
 }
 
+
+
+
 // med pug.js, en html preprocessor
 export function utvecklajeetstill() {
   return gulp.src('assets/styles/jeet-demo.scss')
@@ -103,6 +109,21 @@ export function pugsidor() {
     .pipe(gulp.dest(paths.pug.dest));
 }
 
+function reload(done) {
+  server.reload();
+  done();
+}
+
+function serve(done) {
+  server.init({
+    server: {
+      baseDir: './dist'
+    }
+  });
+  done();
+}
+
+
 // Övervakning
 function watch() {
   gulp.watch(paths.tex.src, deltatex);
@@ -118,6 +139,8 @@ gulp.task('rensa', gulp.series(texsamlare, pdfsamlare));
 gulp.task('utvecklajeet', gulp.series(utvecklajeetstill, watch));
 
 const build = gulp.series(styles, pugsidor, publicera, deltatex, watch);
+
+const latex = gulp.series(deltatex, serve, watch);
 
 gulp.task('default', build);
 
