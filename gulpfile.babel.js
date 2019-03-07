@@ -118,6 +118,7 @@ gulp.task('rensa', gulp.series(texsamlare, pdfsamlare));
 gulp.task('utvecklajeet', gulp.series(utvecklajeetstill, watch));
 
 const build = gulp.series(styles, pugsidor, publicera, deltatex, watch);
+
 gulp.task('default', build);
 
 // min kod blir bättre och bättre
