@@ -4,7 +4,9 @@
   "description": "Hugo's Tech Notes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vuepress:dev": "vuepress dev vuepress",
+    "vuepress:build": "vuepress build vuepress"
   },
   "repository": {
     "type": "git",
