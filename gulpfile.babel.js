@@ -21,8 +21,8 @@ const paths = {
     dest: 'assets/html/dist'
   },
   tex: {
-    src: 'orgutkasten/*.tex',
-    dest: 'Valhall/TeX'
+    src: 'orgmode/*.tex',
+    dest: 'latex'
   },
   pdf: {
     src: './**/*.pdf',
@@ -143,5 +143,3 @@ const build = gulp.series(styles, pugsidor, publicera, deltatex, watch);
 const latex = gulp.series(deltatex, serve, watch);
 
 gulp.task('default', build);
-
-// min kod blir bättre och bättre
